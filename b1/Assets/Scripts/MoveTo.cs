@@ -13,7 +13,7 @@ public class MoveTo : MonoBehaviour {
     }
         
     void Update() {
-         if (Input.GetMouseButtonDown(1)) {
+         if (Input.GetMouseButtonDown(1) && GetComponent<ClickOn>().currentSelected == true) {
             Ray myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
                 
